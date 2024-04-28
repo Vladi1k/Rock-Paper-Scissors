@@ -17,7 +17,6 @@ function saveStats(){
 }
 
 function updateStats(isWin){
-    stats.played++
     if(isWin){
         stats.won++
     }
