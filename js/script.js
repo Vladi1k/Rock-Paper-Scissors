@@ -8,7 +8,6 @@ if(!stats){
         played: 0,
         won: 0,
         lost: 0,
-        draw: 0
     }
 }
 
@@ -65,7 +64,7 @@ function playAgain(){
 
 
 function rockClick(){
-    stats.played++
+
     ai();
     console.log(ai_result);
     playerImg.src = "./images/result-menu/rock-player.png"
@@ -75,10 +74,12 @@ function rockClick(){
     if(ai_result === "paper"){
         aiImg.src = "./images/result-menu/paper-ai.png";
         resultText.innerHTML = "you lose :(";
+        stats.played++
         updateStats(false)
     } else if(ai_result === "scissors"){
         aiImg.src = "./images/result-menu/scissors-ai.png";
         resultText.innerHTML = "you win! :)";
+        stats.played++
         updateStats(true)
     } else {
         aiImg.src = "./images/result-menu/rock-ai.png";
@@ -90,7 +91,6 @@ function rockClick(){
 }
 
 function paperClick(){
-    stats.played++
     ai();
     console.log(ai_result);
     playerImg.src = "./images/result-menu/paper-player.png"
@@ -100,10 +100,12 @@ function paperClick(){
     if(ai_result === "scissors"){
         aiImg.src = "./images/result-menu/scissors-ai.png";
         resultText.innerHTML = "you lose :(";
+        stats.played++
         updateStats(false)
     } else if(ai_result === "rock"){
         aiImg.src = "./images/result-menu/rock-ai.png";
         resultText.innerHTML = "you win! :)";
+        stats.played++
         updateStats(true)
     } else {
         aiImg.src = "./images/result-menu/paper-ai.png";
@@ -112,7 +114,6 @@ function paperClick(){
 }
 
 function scissorsClick(){
-    stats.played++
     ai();
     console.log(ai_result);
     playerImg.src = "./images/result-menu/scissors-player.png"
@@ -122,10 +123,12 @@ function scissorsClick(){
     if(ai_result === "rock"){
         aiImg.src = "./images/result-menu/rock-ai.png";
         resultText.innerHTML = "you lose :(";
+        stats.played++
         updateStats(false)
     } else if(ai_result === "paper"){
         aiImg.src = "./images/result-menu/paper-ai.png";
         resultText.innerHTML = "you win! :)";
+        stats.played++
         updateStats(true)
     } else {
         aiImg.src = "./images/result-menu/scissors-ai.png";
