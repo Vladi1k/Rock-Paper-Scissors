@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="start-screen">
+            <h1 class="start__title">Rock <br>
+                / paper /
+                scissors</h1>
+                <img src="./images/play-menu/start-hand.png" alt="hand" class="start__img">
+                <button class="start__btn" type="button" onclick="startBtn()">START</button>
+        </div>
+        <div class="play-screen">
+            <img src="./images/start-menu/play-img.png" alt="hand" class="play__img">
+            <h2 class="play__title">Let’s play!</h2>
+            <button class="play__btn" onclick="checkStats()">Check your stats 👀</button>
+            <p class="play__text">pick an option:</p>
+
+            <ul class="play-list">
+                <li onclick="rockClick()"><img src="./images/start-menu/list-img1.png" alt="" class="play-list-img"></li>
+                <li onclick="paperClick()"><img src="./images/start-menu/list-img2.png" alt="" class="play-list-img"></li>
+                <li onclick="scissorsClick()"><img src="./images/start-menu/list-img3.png" alt="" class="play-list-img"></li>
+            </ul>
+        </div>
+        <div class="stats-screen">
+            <img src="./images/favicon.svg" alt="cool" class="stats__img">
+            <h2 class="stats__title">Your stats 🔥</h2>
+            <p class="stats__text">Your rank: <span id="rank">no rank</span></p>
+            <p class="stats__text">Matches played: <span id="played"></span></p>
+            <p class="stats__text">Matches won: <span id="won"></span></p>
+            <p class="stats__text">Lost mathes: <span id="lost"></span></p>
+            <button class="stats__btn" onclick="backGame()">Back to game ↩️</button>
+        </div>
+        <div class="result-screen">
+            <img src="./images/result-menu/rock-ai.png" alt="hand" class="result-img-ai">
+            <h2 class="result__title">IT’S A DRAW</h2>
+            <button class="result__btn" onclick="playAgain()">Play again</button>
+            <img src="./images/result-menu/rock-player.png" alt="hand" class="result-img-player">
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/stat.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
