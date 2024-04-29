@@ -84,7 +84,7 @@ function rockClick(){
     } else {
         aiImg.src = "./images/result-menu/rock-ai.png";
         resultText.innerHTML = "IT’S A DRAW ";
-
+        stats.played++
     }
     
 
@@ -110,6 +110,7 @@ function paperClick(){
     } else {
         aiImg.src = "./images/result-menu/paper-ai.png";
         resultText.innerHTML = "IT’S A DRAW ";
+        stats.played++
     }
 }
 
@@ -133,6 +134,7 @@ function scissorsClick(){
     } else {
         aiImg.src = "./images/result-menu/scissors-ai.png";
         resultText.innerHTML = "IT’S A DRAW ";
+        stats.played++
     }
 }
 
